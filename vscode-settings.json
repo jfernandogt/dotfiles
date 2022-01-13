@@ -1,0 +1,25 @@
+{
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 16,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "git.allowNoVerifyCommit": true,
+    "git.enableCommitSigning": true,
+    "git.confirmNoVerifyCommit": false,
+    "cSpell.enabled": true
+}
