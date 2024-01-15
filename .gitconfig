@@ -1,7 +1,19 @@
 [user]
 	email = email@domain.com
-	name = My Name
+	name = Fernando Barrios
 [alias]
+	# cherry-pick aliases
+	cp = cherry-pick
+	cpc = cherry-pick --continue
+	cps = cherry-pick --skip
+	cpa = cherry-pick --abort
+	
+	# rebase aliases
+	rbc = rebase --continue
+	rbs = rebase --skip
+	rba = rebase --abort
+	# sync
+	sync = fetch -p --all
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -17,6 +29,8 @@
 	c = clone --recursive
 	# Commit all changes
 	ca = !git add -A && git commit -av
+	# Remove all local branches that starts with Regex
+	clb = "!f() { git branch --list $1* | sed 's/^* //' | xargs -r git branch -D; }; f"
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 	# Show verbose output about tags, branches or remotes
@@ -67,3 +81,5 @@
 [core]
 	autocrlf = input
 	editor = vi
+[push]
+	autoSetupRemote = true
