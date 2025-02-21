@@ -15,8 +15,15 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 setopt HIST_EXPIRE_DUPS_FIRST
-bindkey '\e[A' history-search-backward
-bindkey '\e[B' history-search-forward
+
+
+# Bind up and down arrows for substring search
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '\e[A' up-line-or-beginning-search
+bindkey '\e[B' down-line-or-beginning-search
 
 
 # case sensitive completion
